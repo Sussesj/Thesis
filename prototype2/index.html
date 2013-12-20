@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script type="script" src="openpaths_sussesonderby.json"></script>
+	<script>
+
+	var data;
+	var latitude = new Array();
+	var longitude = new Array();
+	var latitude2 = new Array();
+	var longitude2 = new Array();
+	var j;
+
+	jQuery(document).ready(function($){	
+		$.ajax({
+			url:'openpaths_sussesonderby.json',
+			dataType: "json",
+			success : function(data){
+				// console.log(data);
+				for(i=0; i<data.length; i++){
+					
+					if (j<data.lenght){
+						j = i+1;
+					}else{
+						j = i;
+					}
+					latitude[i] = data[i].lat;
+					longitude[i] = data[i].lon;
+					latitude2[j] = data[j].lat;
+					longitude2[j] = data[j].lon;
+
+					if(longitude[i]<0){
+						longitude[i] =- longitude[i];
+					}
+					if(longitude2[j]<0){
+						longitude2[j] =- longitude2[j];
+					}
+					console.log(latitude[i]);
+					console.log(longitude[i]);
+					console.log(latitude2[j]);
+					console.log(longitude2[j]);
+					// // Set up!
+					var c=document.getElementById("myCanvas");
+					var ctx=c.getContext("2d");
+					ctx.moveTo(latitude2[j]*100,longitude2[j]*100);
+					ctx.lineTo(latitude[i],longitude[i]);
+					ctx.stroke();
+					
+				}
+				
+			}
+		});
+	});
+	</script>	
+</head>
+<body>
+	<h1> Figuring out my openpath and visualizing it</h1>
+	<canvas id="myCanvas" width="200" height="200" style="border:1px solid #d3d3d3;">
+            This text is displayed if your browser does not support HTML5 Canvas.
+        </canvas>
+
+</body>
+</html>
