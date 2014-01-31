@@ -23,11 +23,23 @@
 				x=document.getElementById("fiveEvent").style.display = 'none';    // Change the content
 				x=document.getElementById("fourthEvent").style.display = 'none';
 				x=document.getElementById("slideShare").style.display = 'none';
+				x=document.getElementById("twitterStats").style.display = 'none';
 				
 			}
 			function myFunction2()
 			{  // Find the element
 				x=document.getElementById("slideShare").style.display = 'block';    // Change the content
+				x=document.getElementById("titelDesigner").style.display = 'block';
+				x=document.getElementById("fiveEvent").style.display = 'none';    // Change the content
+				x=document.getElementById("fourthEvent").style.display = 'none';
+				x=document.getElementById("videoShow").style.display = 'none'; 
+				x=document.getElementById("twitterStats").style.display = 'none';
+			}
+
+			function myFunction3()
+			{
+				x=document.getElementById("twitterStats").style.display = 'block'; 
+				x=document.getElementById("slideShare").style.display = 'none';    // Change the content
 				x=document.getElementById("titelDesigner").style.display = 'block';
 				x=document.getElementById("fiveEvent").style.display = 'none';    // Change the content
 				x=document.getElementById("fourthEvent").style.display = 'none';
@@ -46,33 +58,43 @@
 				Your path description
 			</h2>
 
+			<h2 id="share">
+				Share >
+			</h2>
+
 			<canvas id="myCanvas" width="1258" height="520">
 			</canvas>
 
 			<div id="firstEvent" class="arcEvents" onclick="myFunction()">
 			</div>
-			<div id="titelDesignIntern">Design Intern</div>
+				<div id="titelDesignIntern">Design Intern</div>
 
-			<div id="videoShow">
-				<iframe src="//player.vimeo.com/video/81557907" width="350" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-				</iframe> 
-				<div id="time"><strong>Date:</strong> August 2012</div>
-				<div id="ppl"><strong>Collaborators:</strong> Elis Elain</div>
-			</div>
+				<div id="videoShow">
+					<iframe src="//player.vimeo.com/video/72305374" width="350" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe> 
+					<div id="time"><strong>Date:</strong> August 2012</div>
+					<div id="ppl"><strong>Collaborators:</strong> Elis Elain</div>
+				</div>
 
-			<div id="secondEvent" class="arcEvents" onclick="myFunction2()" onmouseover="myFunction3">
+			<div id="secondEvent" class="arcEvents" onclick="myFunction2()">
 			</div>
 				<div id="titelDesigner">Junior Designer</div>
 
 				<div id="slideShare">
-					<iframe src="http://www.slideshare.net/slideshow/embed_code/28205326" width="397" height="276" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe> 
+					<iframe src="http://www.slideshare.net/slideshow/embed_code/28205326" width="397" height="276" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="https://www.slideshare.net/SusseSnderbyJensen/mozfest-learning-path"  target="_blank"> </a> </strong> <strong><a href="http://www.slideshare.net/SusseSnderbyJensen" target="_blank"></a></strong> </div>
 					<div id="time"><strong>Date:</strong> June 2013</div>
 					<div id="ppl"><strong>Tag:</strong> Badges</div>
 				</div>
 
-			<div id="thirdEvent" class="arcEvents">
+			<div id="thirdEvent" class="arcEvents" onclick="myFunction3()">
 			</div>
-			<div id="titelSeniorDesigner">Senior Designer</div>
+				<div id="titelSeniorDesigner">Designer</div>
+
+				<div id="twitterStats">
+					<img src="img/twitterPic.png" width="48%">
+					<div id="pplTwitter"><strong>Tag:</strong> Badges</div>
+				</div>
+
+
 
 
 			<div id="fourthEvent" class="slideEvent">
@@ -89,22 +111,7 @@
 			<div id="draggable2">
   					<p>Past</p>
 			</div>
-			
-
-			<div class="timeline"> 
-			</div>
-
-			<div id="sidebar">
-				<p id="plus">+</p>
-				<p id="text">Edit Path<p>
-				<p id="addMedia">Add Media</p>
-				<p id="ImportLink">Import Link</p>
-				<p id="addCollaborator">Add Collaborator</p>
-				<p id="SetTimeStamp">Set Timestamp</p>
-				<p id="ExportPath">Export Path</p>
-			</div>
-
-
+	
 
 		<footer class="dashboardFooter">
 	            	<p>&copy;All rights Susse Sønderby</p>

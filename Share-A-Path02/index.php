@@ -41,7 +41,6 @@
             </div>
         
             <div class="footerLogo">
-                <img src="img/spaceship.png" alt="To space"> 
             </div>
             <footer class="dashboardFooter">
                 <p>&copy;All rights Susse Sønderby</p>
